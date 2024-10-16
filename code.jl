@@ -1,6 +1,6 @@
 """ Chapter 1: The Way of the Program """
 
-println("CHAPTER 1: The Way of the Program ")
+println("CHAPTER 1: THE WAY OF THE PROGRAM ")
 
 # The First Program in page 3
 println("Hello World!") 
@@ -21,7 +21,7 @@ println("The type of 'Hello World' is: ",typeof("Hello World")) #String
 
 """ Chapter 2: Variables, Expressions and Statements  """
 
-println("CHAPTER 2: Variables, Expressions and Statements")
+println("CHAPTER 2: VARIABLES, EXPRESSIONS AND STATEMENTS")
 
 # Script Mode 
 miles = 26.2
@@ -43,7 +43,7 @@ println("Repetition of Strings is: ", repetition_of_string)
 
 """ Chapter 3: Functions """
 
-println("CHAPTER 3: Functions")
+println("CHAPTER 3: FUNCTIONS")
 
 #=
 In the context of programming, a function is a named sequence of statements that performs a computation. When you define a 
@@ -59,12 +59,12 @@ There are 2 types of functions:
 =#
 
 # parse takes a string and converts it to any number type
-println(parse(Int64, "32"))
-println(parse(Float64, "3.14159"))
+println("The parse(Int64, '32') is: ", parse(Int64, "32"))
+println("The parse(Float64, '3.14159') is: ", parse(Float64, "3.14159"))
 
 # trunc converts floating-point values to integers; it chops off the fraction part
-println(trunc(Int64, 3.9999))
-println(trunc(Int64, -2.3))
+println("The trunc(Int64, 3.9999) is: ", trunc(Int64, 3.9999))
+println("The trunc(Int64, -2.3) is: ", trunc(Int64, -2.3))
 
 # float converts integers to floating-point numbers
 println("The type of 32  is: ", typeof(32))
@@ -99,8 +99,21 @@ function printtwice(bruce)
     println(bruce)
     println(bruce)
 end
-printtwice("Spam")
-printtwice(42)
+printtwice("Spam") # bruce = Spam
+printtwice(42) # bruce = 42
+
+function printtwice2(bruce,tom)
+    println(bruce)
+    println(tom)
+    println(bruce)
+    println(tom)
+end
+
+printtwice2("Spam",42)
+printtwice2(42,"Spam") 
+# This tells us order is what is important. The name of the variable we pass as an argument
+# when we call the function has nothing to do with the name of the parameter in the function 
+# definition. 
 
 # We can also use variables as an argument
 michael = "Eric, the half a bee"
@@ -109,7 +122,7 @@ printtwice(michael)
 
 """ Chapter 5: Conditionals and Recursion """
 
-println("CHAPTER 5: Conditionals and Recursion")
+println("CHAPTER 5: CONDITIONALS AND RECURSION")
 
 #=
 The main topic of this chapter is the if statement, which executes different code depending on the status of the program. 
@@ -143,6 +156,7 @@ println(3 <= 5) # 3 is less than or equal to 5
 && -> AND 
 || -> OR
 ! -> NOT
+
 =#
 
 println(5 > 3 && 5 == 5) # And - returns true as both LHS and RHS are true
@@ -208,7 +222,9 @@ Hence, we need to define a prompt and ask for an input the following way:
 =#
 #println("What...is your name?"); readline() #WORK THIS OUT!!
 
-""" Chapter 7: Iteration """
+""" Chapter 7: ITERATIONS """
+
+println("CHAPTER 7: ITERATIONS")
 
 #= 
 This chapter is about iteration, which is the ability to run a block of statements repeatedly. Recursion is a type of
@@ -254,14 +270,16 @@ println("Done!")
 
 """ Chapter 8: Strings """
 
+println("CHAPTER 8: STRINGS")
+
 # A string is a sequence, which means it is an ordered collection of other values
 
 # You can access the characters one at a time with the bracket operator ([]):
 fruit = "banana"
 println("The string is: ", fruit)
 letter = fruit[1]
-println("The first element of our string fruit, letter, is: ", letter)
-println("The last element of our string fruit, letter, is: ", fruit[end])
+println("The first element of our string fruit, letter, is: ", letter) # Indexing starts at 1, unlike python
+println("The last element of our string fruit, letter, is: ", fruit[end]) 
 
 # Length is an inbuilt function that returns the number of characters in a string
 len = length(fruit)
